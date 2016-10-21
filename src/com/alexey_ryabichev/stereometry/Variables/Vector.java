@@ -1,7 +1,6 @@
 package com.alexey_ryabichev.stereometry.Variables;
 
 import com.alexey_ryabichev.stereometry.Variables.Point;
-import com.sun.java_cup.internal.runtime.Symbol;
 import java.util.*;
 
 /**
@@ -28,6 +27,14 @@ public class Vector {
         this.x = x;
         this.y = y;
         this.z = z;
+    }
+
+    public Vector(Point point1, Point point2){
+        this.point1 = point1;
+        this.point2 = point2;
+        x = point2.x - point1.x;
+        y = point2.y - point1.y;
+        z = point2.z - point1.z;
     }
 
     public Vector(Line line){

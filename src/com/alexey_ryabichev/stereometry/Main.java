@@ -49,8 +49,9 @@ public class Main{
     }
 
     private double distanceBetweenPointAndLine(Point point, Line line){
-        double distance;
-        return 1;//TODO: FINISH IT!)
+        Vector u = new Vector(line);
+        Vector l = new Vector(projectionPointOnLine(point, line),line.point1);
+        return Math.sqrt(Math.pow(u.length, 2) - Math.pow(l.length, 2));
     }
 
     private Point projectionPointOnLine(Point point, Line line){
@@ -61,8 +62,6 @@ public class Main{
         p.addNumber(number);
         return p;
     }
-
-    private 
 
     private Point attitudePoint(double coeff, Segment segment){
         double x = (segment.point1.x + coeff*segment.point2.x) / (1 + coeff);
