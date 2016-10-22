@@ -6,7 +6,7 @@ package com.alexey_ryabichev.stereometry.Variables;
 public class Segment {
     public Point point1, point2;
 
-    public Segment(double x1, double y1, double z1, double x2, double y2, double z2){
+    public Segment(double x1, double y1, double z1, double x2, double y2, double z2) {
         point1.x = x1;
         point1.y = y1;
         point1.z = z1;
