@@ -8,7 +8,7 @@ import com.alexey_ryabichev.stereometry.Main;
 public class Plane {
     public double a, b, c, d;
     Point point1, point2, point3;
-    Vector n = null;
+    public Vector n = null;
 
     public Plane(double a, double b, double c, double d) {
         this.a = a;

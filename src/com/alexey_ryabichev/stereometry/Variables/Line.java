@@ -5,6 +5,7 @@ package com.alexey_ryabichev.stereometry.Variables;
  */
 public class Line {
     public Point point1, point2;
+    public Vector n;
 
     public Line(double x1, double y1, double z1, double x2, double y2, double z2) {
         point1.x = x1;
@@ -13,5 +14,6 @@ public class Line {
         point2.x = x2;
         point2.y = y2;
         point2.z = z2;
+        n = new Vector(point1, point2);
     }
 }

@@ -84,4 +84,16 @@ public class Main {
     private double distanceBetweenPointAndPlane(Plane plane, Point point) {
         return (plane.a * point.x + plane.b * point.y + plane.c * point.z + plane.d) / Math.sqrt(Math.pow(plane.a, 2) + Math.pow(plane.b, 2) + Math.pow(plane.c, 2));
     }
+
+    private double angleBetweenLines(Line line1, Line line2){
+        return angleBetweenVectors(line1.n, line2.n);
+    }
+
+    private double angleBetweenLineAndPlane(Plane plane, Line line){
+        return angleBetweenVectors(line.n, plane.n);
+    }
+
+    private double angleBetweenPlanes(Plane plane1, Plane plane2){
+        return angleBetweenVectors(plane1.n, plane2.n);
+    }
 }
