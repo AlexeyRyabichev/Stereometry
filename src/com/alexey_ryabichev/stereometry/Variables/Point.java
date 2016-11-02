@@ -5,6 +5,13 @@ package com.alexey_ryabichev.stereometry.Variables;
  */
 public class Point {
     public double x, y, z;
+    public boolean isExist = true;
+    public String string;
+
+    public Point(boolean isExist, String string){
+        this.isExist = isExist;
+        this.string = string;
+    }
 
     public Point(double x, double y, double z){
         this.x = x;
@@ -16,5 +23,11 @@ public class Point {
         x += number;
         y += number;
         z += number;
+    }
+
+    public void addVector(Vector vector){
+        x += vector.x;
+        y += vector.y;
+        z += vector.z;
     }
 }
